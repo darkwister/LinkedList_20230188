@@ -82,7 +82,8 @@ class List:
             puntero.next = puntero.next.next
 
     def mostrar(self):
-        #Lista todos los elementos dentro de la lista, y el final es un null, como se define en este tipo de listas
+        #Lista todos los elementos dentro de la lista, y el final es un null, como se define
+        # en este tipo de listas
         if self.inicio is None:
             print("La lista está vacía")
         else:
