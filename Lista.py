@@ -28,14 +28,28 @@ class List:
             # es la primera directamente se inserta en esta posicion
             nuevo_nodo.next = self.inicio
             self.inicio = nuevo_nodo
+            return
         else: #De otro modo se busca de igual forma donde esta la posicion
+            longitud = 0
             puntero = self.inicio
-            for _ in range(pos - 2):
+            #Validamos el largo de la lista
+            while puntero is not None:
+                longitud += 1
+                puntero = puntero.next
+            #Si la posicion sobre pasa el largo de la lista, se inserta al final
+            if pos > longitud:
+                self.insertar_final(item)
+                return
+            #Se encarga insertar el nodo a la posicion deseada
+            puntero = self.inicio
+            for _ in range(pos -    2):
                 if puntero.next is None:
                     break
                 puntero = puntero.next
             nuevo_nodo.next = puntero.next #Y se agrega el nuevo nodo
             puntero.next = nuevo_nodo
+
+
 
     def eliminar_inicio(self): #Se elimina el nodo que se encuentra al inicio de la lista
         if self.inicio is None:

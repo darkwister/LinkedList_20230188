@@ -35,7 +35,7 @@ if __name__ == "__main__":
             elif opc == 4:
                 clear()
                 lista.mostrar()
-                lista.insertar_posicion(input("Insertar al final de la lista: "),int(input("Insertar posicion objetivo de la lista: ")))
+                lista.insertar_posicion(input("Insertar la lista: "),int(input("Insertar en posicion objetivo de la lista: ")))
             elif opc == 5:
                 clear()
                 lista.eliminar_inicio()
